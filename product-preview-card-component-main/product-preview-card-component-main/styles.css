@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 1vw auto;
+  padding: 0 1vw;
+}
+
+.grid {
+  max-width: 43.75em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  display: inherit;
+}
+
+.description {
+  padding: 1.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-type {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+}
+
+.product-title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2.4em;
+}
+
+.product-description {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+}
+
+.discount-price {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 2em;
+  padding-right: 1.1em;
+}
+
+.original-price {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.buy {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  padding: 1em 0;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5em;
+  font-weight: 700;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.buy img {
+  margin-right: 0.5em;
+}
+
+.buy:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+@media only screen and (max-width: 625px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .img img {
+    max-height: 28.125em;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .conatiner {
+    margin: 15px auto;
+    padding: 0 15px;
+  }
+
+  .img img {
+    max-height: 290px;
+  }
+  .description {
+    padding: 24px;
+  }
+  .product-title,
+  .product-description,
+  .product-type,
+  .pricing {
+    padding-bottom: 16px;
+  }
+
+  .product-title {
+    font-size: 28px;
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+  .discount-price {
+    font-size: 22px;
+  }
+
+  .buy button{
+    padding: 12px 0;
+    font-size: 12px;
+  }
+}
